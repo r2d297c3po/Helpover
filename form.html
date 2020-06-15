@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <base target="_top">
+    <link rel="stylesheet" href="https://ssl.gstatic.com/docs/script/css/add-ons1.css">
+    <!-- The CSS package above applies Google styling to buttons and other elements. -->
+  </head>
+  <body>
+    <form onsubmit="google.script.run.processForm(this); google.script.host.close()">
+      <div class="form-group">
+        <label for="name"><b>Recipient name:</b></label>
+        <input type="text" id="name" name="name" style="width: 200px;">
+      </div>
+      <div class="form-group">
+        <label for="itMember"><b>IT member:</b></label>
+        <input type="text" id="itMember" name="itMember" style="width: 200px;">
+      </div>
+      <div class="form-group">
+        <label for="inventoryNum"><b>Inventory number:</b></label>
+        <input type="text" id="inventoryNum" name="inventoryNum" autocomplete="off" style="width: 120px;">
+      </div>
+      <div class="form-group">
+        <label for="assetName"><b>Name of the asset:</b></label>
+        <input type="text" id="assetName" name="assetName" style="width: 200px;" required="required">
+      </div>
+      <div class="form-group">
+        <label for="serial"><b>Serial number:</b></label>
+        <input type="text" id="serial" name="serial" autocomplete="off" style="width: 200px;">
+      </div>
+      <div class="form-group">
+        <label for="quantity"><b>Quantity:</b></label>
+        <input type="number" id="serial" min="1" name="quantity" value="1" style="width: 50px;" required="required">
+      </div>
+      <div class="form-group">
+        <input type="checkbox" id="extraCharger" name="extraCharger">
+        <label for="extraCharger">Extra charger</label>
+      </div>
+      <div class="form-group">
+        <input type="checkbox" id="usbc" name="usbc">
+        <label for="usbc">USB-C hub</label>
+      </div>
+      <div class="form-group">
+        <input type="checkbox" id="nonda" name="nonda">
+        <label for="nonda">NONDA USB-C to USB-A</label>
+      </div>
+      <div class="inline form-group">
+        <input type="submit" value="Submit">
+        <input type="button" value="Close" onclick="google.script.host.close()" />
+      </div>
+    </form>
+  </body>
+</html>
